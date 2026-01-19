@@ -1,47 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download Mushtaq Store</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background: #020617;
-        margin: 0;
-        overflow-x: hidden;
-      }
-      @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-15px); }
-      }
-      .animate-float {
-        animation: float 5s ease-in-out infinite;
-      }
-      ::selection {
-        background: #3b82f6;
-        color: white;
-      }
-    </style>
-    <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@19.0.0",
-    "react-dom": "https://esm.sh/react-dom@19.0.0",
-    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
-    "react/jsx-runtime": "https://esm.sh/react@19.0.0/jsx-runtime",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/"
-  }
-}
-</script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="index.tsx"></script>
-  </body>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-container">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <main class="content-wrapper">
+        <div class="glass-card">
+            <!-- Icon Section -->
+            <div class="icon-box floating">
+                <svg class="download-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+            </div>
+
+            <!-- Text Section -->
+            <h1 class="title">Mushtaq Store</h1>
+            <p class="subtitle">The official destination for premium Android experiences. Safe, fast, and optimized for your device.</p>
+
+            <!-- Download Button -->
+            <div class="button-container">
+                <button id="downloadBtn" class="premium-btn">
+                    <span class="btn-text">Download APK</span>
+                    <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                    <div class="shine"></div>
+                </button>
+                <p id="statusHint" class="status-hint">Mushtaq_store.apk (24.5 MB)</p>
+            </div>
+
+            <!-- Specs Grid -->
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <span class="spec-label">Version</span>
+                    <span class="spec-value">1.0.0</span>
+                </div>
+                <div class="spec-divider"></div>
+                <div class="spec-item">
+                    <span class="spec-label">OS</span>
+                    <span class="spec-value">Android</span>
+                </div>
+                <div class="spec-divider"></div>
+                <div class="spec-item">
+                    <span class="spec-label">Status</span>
+                    <span class="spec-value secure">Verified</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-tag">Official Distribution Channel</p>
+        <p class="footer-copy">&copy; 2025 Mushtaq Store. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
